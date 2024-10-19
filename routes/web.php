@@ -22,3 +22,7 @@ Route::get('/about', function () {
         "yonas" => "intellijence"
     ];
 });
+Route::get("/contact " , function (){
+    return view("contact");
+
+});
