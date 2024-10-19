@@ -9,9 +9,9 @@
 
 <body>
     <nav>
-        <x-nav-link href>home</x-nav-link>
-        <x-nav-link>about</x-nav-link>
-        <x-nav-link>contact</x-nav-link>
+        <x-nav-link href="/">home</x-nav-link>
+        <x-nav-link href="/about">about</x-nav-link>
+        <x-nav-link href="/contact">contact</x-nav-link>
 
 
     </nav>
