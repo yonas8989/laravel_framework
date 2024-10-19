@@ -9,12 +9,13 @@
 
 <body>
     <nav>
-        <a href="/">home</a>
-        <a href="/about">contact </a>
-        <a href="/contact">about</a>
+        <x-nav-link href>home</x-nav-link>
+        <x-nav-link>about</x-nav-link>
+        <x-nav-link>contact</x-nav-link>
+
 
     </nav>
- <?php echo $slot ?>
+    <?php echo $slot; ?>
 
 </body>
 
