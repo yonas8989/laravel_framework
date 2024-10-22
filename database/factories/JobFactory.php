@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Employer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,17 @@ class JobFactory extends Factory
     public function definition(): array
     {
         return [
+            'title' => fake()->jobTitle(),
+            'salary' => fake()->unique()->numberBetween(2000, 10000),
+            'employer_id' =>Employer::factory(),
+            'admin' =>  false,
             //
         ];
+    }
+    public function admin(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'admin' => true
+        ]);
     }
 }
