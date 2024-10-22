@@ -1,8 +1,10 @@
 <?php
 
 use App\Models\Job;
+use App\Models\Student;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Schema;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +16,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-
-
-
-
-
 Route::get('/', function () {
-    return view('home');
+return view('home');
+
 });
+
 Route::get("/jobs", function () {
+
     return view("jobs", ['jobs' => Job::all()]);
 });
 
