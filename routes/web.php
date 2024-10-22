@@ -24,7 +24,7 @@ return view('home');
 
 Route::get("/jobs", function () {
 
-    return view("jobs", ['jobs' => Job::with('employer')->get()]);
+    return view("jobs", ['jobs' => Job::with('employer')->cursorPaginate(3)]);
 });
 
 Route::get("/jobs/{id} ", function (
