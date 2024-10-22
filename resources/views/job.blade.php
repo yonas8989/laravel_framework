@@ -1,7 +1,14 @@
 <x-layout>
     <x-slot:heading>
-        job
+        <h1 class="text-4xl font-bold text-center text-blue-600 mb-8">Job Details</h1>
     </x-slot:heading>
-    <h1>{{$job['title']}}</h1>
-    <p>this job pays {{$job['salery']}}</p>
+
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md space-y-6">
+        <h1 class="text-3xl font-semibold text-gray-800">{{$job['title']}}</h1>
+        <p class="text-xl text-green-600">This job pays ${{$job['salery']}} per year</p>
+
+        <div class="flex justify-center mt-6">
+            <a href="/apply/{{$job['id']}}" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">Apply Now</a>
+        </div>
+    </div>
 </x-layout>
