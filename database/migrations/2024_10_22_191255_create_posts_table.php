@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-         Schema::create("job_boardings" , function (Blueprint $table) {
-            $table->increments("id");
-            $table->string("title");
-            $table->string("salery");
-         });
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('posts');
     }
 };

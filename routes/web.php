@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Schema;
 |
 */
 Route::get('/', function () {
+
 return view('home');
 
 });
