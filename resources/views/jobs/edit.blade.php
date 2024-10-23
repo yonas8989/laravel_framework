@@ -54,7 +54,7 @@
 
                                     <!-- Right Section (Update and Delete Buttons) -->
                                     <div class="flex items-center gap-x-4">
-                                        <button type="submit" form="delete-form" class="rounded-md bg-gradient-to-r from-purple-500 to-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-lg hover:from-purple-600 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition duration-300 ease-in-out">
+                                        <button type="submit"  class="rounded-md bg-gradient-to-r from-purple-500 to-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-lg hover:from-purple-600 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition duration-300 ease-in-out">
                                             Update
                                         </button>
 
