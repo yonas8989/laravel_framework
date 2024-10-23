@@ -16,16 +16,34 @@ use Illuminate\Support\Facades\Schema;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::get('/', function () {
 
-return view('home');
-
+    return view('home');
 });
 
 Route::get("/jobs", function () {
 
-    return view("jobs", ['jobs' => Job::with('employer')->cursorPaginate(3)]);
+    return view("jobs/index", ['jobs' => Job::with('employer')->latest  ()->paginate(10)]);
 });
+
+
+
+Route::get("/jobs/create", function () {
+    return view("jobs/create");
+});
+Route::post("/jobs", function () {
+    Job::create(
+        [
+            'title' => request('title'),
+            'salary' => request('salary'),
+            'employer_id' => 1,
+        ]
+    );
+    return redirect('/jobs');
+});
+
+
 
 Route::get("/jobs/{id} ", function (
     $id
@@ -33,7 +51,7 @@ Route::get("/jobs/{id} ", function (
 
 
     $job = Job::find($id);
-    return view("job", ['job' => $job]);
+    return view("jobs.show", ['job' => $job]);
 });
 
 

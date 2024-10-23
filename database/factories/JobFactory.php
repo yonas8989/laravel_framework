@@ -21,7 +21,7 @@ class JobFactory extends Factory
             'title' => fake()->jobTitle(),
             'salary' => fake()->unique()->numberBetween(2000, 10000),
             'employer_id' =>Employer::factory(),
-            'admin' =>  false,
+            // 'admin' =>  false,
             //
         ];
     }

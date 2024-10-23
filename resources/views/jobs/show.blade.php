@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:heading>
-        <h1 class="text-4xl font-bold text-center text-blue-600 mb-8">Job Details</h1>
+        <h1 class="text-4xl font-bold text-center text-blue-600 mb-8"> job detail </h1>
     </x-slot:heading>
 
     <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md space-y-6">
