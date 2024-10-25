@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\JobControllers;
+use App\Http\Controllers\SessionController;
+use App\Http\Controllers\UserController;
 use App\Models\Job;
 use App\Models\Student;
 use Illuminate\Support\Arr;
@@ -21,7 +23,15 @@ use Illuminate\Support\Facades\Schema;
 Route::get('/', function () {
 
     return view('home');
-}); // contact
+}); 
+// register 
+Route::get("/register", [UserController::class , 'create']);
+Route::post("/register", [UserController::class , 'store']);
+// login form 
+Route::get('/login', [SessionController::class ,'create']);
+Route::post('/login', [SessionController::class ,'store']);
+
+// contact
 Route::get("/contact ", function () {
     return view("contact");
 });
