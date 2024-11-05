@@ -29,6 +29,7 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
+        
         dd("you hit this end point ");
         }
 
