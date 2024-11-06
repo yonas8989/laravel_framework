@@ -36,3 +36,7 @@ Route::get("/contact ", function () {
     return view("contact");
 });
 Route::resource("jobs", JobControllers::class);
+
+
+// route for Vehicle
+Route::resource('/vehicle' , [VehicleController::class]);
